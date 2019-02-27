@@ -1,0 +1,54 @@
+{
+  "name": "@join-com/routes",
+  "version": "1.0.0",
+  "description": "Routes generator lib for JOIN",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": "github:join-com/routes",
+  "author": "JOIN Team",
+  "license": "UNLICENSED",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "yarn ts:check && yarn lint && yarn test && yarn build",
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc -p tsconfig.json",
+    "test:ci": "yarn test",
+    "test:watch": "yarn test --watch",
+    "test": "yarn jest --runInBand",
+    "lint:fix": "yarn lint --fix",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "ts:check": "tsc -p tsconfig.json --noEmit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn ts:check && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tslint -c tslint.json --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "path-to-regexp": "^3.0.0",
+    "qs": "^6.6.0"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.9",
+    "@types/node": "^11.9.5",
+    "@types/qs": "6.5.1",
+    "husky": "^1.3.1",
+    "jest": "^24.1.0",
+    "jest-cli": "^24.1.0",
+    "jest-mock": "^24.0.0",
+    "lint-staged": "^8.1.4",
+    "nodemon": "^1.17.4",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.10.0",
+    "typescript": "^3.3.3333"
+  }
+}

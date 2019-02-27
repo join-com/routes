@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`makeRoutes raises error when missing params 1`] = `[TypeError: Expected "companyId" to be a string]`;
+
+exports[`makeRoutes raises error when missing params 2`] = `[TypeError: Expected "companyId" to be a string]`;
+
+exports[`makeRoutes raises error when route can not be found 1`] = `[Error: Route featuresManage with locale ua does not exist.]`;
+
+exports[`makeRoutes raises error when route can not be found 2`] = `[Error: Route featuresManage with locale ua does not exist.]`;
+
+exports[`makeRoutes when route requires subdomain raises error when subdomain params is missed 1`] = `[Error: Expected "subdomain" to be defined]`;
+
+exports[`makeRoutes when route requires subdomain raises error when subdomain params is missed 2`] = `[Error: Expected "subdomain" to be defined]`;
