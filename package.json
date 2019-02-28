@@ -1,9 +1,12 @@
 {
   "name": "@join-com/routes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Routes generator lib for JOIN",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "repository": "github:join-com/routes",
   "author": "JOIN Team",
   "license": "UNLICENSED",
