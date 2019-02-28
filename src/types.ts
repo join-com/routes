@@ -10,7 +10,7 @@ export interface Route {
 export interface RoutesConfig {
   baseUrl: string
   routes: Route[]
-  locale: string
+  defaultLocale: string
 }
 
 export interface Options {

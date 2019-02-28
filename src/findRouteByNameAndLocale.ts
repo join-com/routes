@@ -14,12 +14,12 @@ const findRouteByNameAndLocale = <T extends string>(
   fallbackLocale?: string
 ) => {
   let route = config.routes.find(
-    byNameAndLocale(routeName, locale, config.locale)
+    byNameAndLocale(routeName, locale, config.defaultLocale)
   )
 
   if (!route && fallbackLocale && fallbackLocale !== locale) {
     route = config.routes.find(
-      byNameAndLocale(routeName, fallbackLocale, config.locale)
+      byNameAndLocale(routeName, fallbackLocale, config.defaultLocale)
     )
   }
 

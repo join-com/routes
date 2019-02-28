@@ -9,7 +9,7 @@ describe('makeRoutes', () => {
   type RouteName = 'root' | 'showJob' | 'showJobSubdomain' | 'featuresManage'
 
   const defaultConfig = {
-    locale: 'en-us',
+    defaultLocale: 'en-us',
     baseUrl: 'http://example.com:3000',
     routes: [
       {
