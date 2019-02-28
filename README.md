@@ -35,8 +35,7 @@ const routes = [
 ]
 
 const appRoutes = makeRoutes<RouteNames>({
-  locale: 'en-us',
-  fallbackLocale: 'en-us',
+  defaultLocale: 'en-us',
   routes
 })
 

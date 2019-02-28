@@ -4,9 +4,9 @@ exports[`makeRoutes raises error when missing params 1`] = `[TypeError: Expected
 
 exports[`makeRoutes raises error when missing params 2`] = `[TypeError: Expected "companyId" to be a string]`;
 
-exports[`makeRoutes raises error when route can not be found 1`] = `[Error: Route featuresManage with locale ua does not exist.]`;
+exports[`makeRoutes raises error when route can not be found 1`] = `[Error: Route notExitingRoute with locale en-us does not exist.]`;
 
-exports[`makeRoutes raises error when route can not be found 2`] = `[Error: Route featuresManage with locale ua does not exist.]`;
+exports[`makeRoutes raises error when route can not be found 2`] = `[TypeError: routes[routeName] is not a function]`;
 
 exports[`makeRoutes when route requires subdomain raises error when subdomain params is missed 1`] = `[Error: Expected "subdomain" to be defined]`;
 

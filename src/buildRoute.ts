@@ -49,13 +49,13 @@ const buildRoute = <T extends string>(
   routeName: T,
   options: Options = {}
 ) => {
-  const { subdomain, locale = config.locale, ...params } = options
+  const { subdomain, locale = config.defaultLocale, ...params } = options
 
   const route = findRouteByNameAndLocale<T>(
     config,
     routeName,
     locale,
-    config.fallbackLocale
+    config.defaultLocale
   )
 
   const useSubdomain = Boolean(route.options && route.options.subdomain)
