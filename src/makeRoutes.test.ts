@@ -60,7 +60,7 @@ describe('makeRoutes', () => {
     expect(routes[routeName](params)).toEqual(expectedUrl) // new signature
   }
 
-  const testException = (routes: any, routeName: string, params: any) => {
+  const testException = (routes: any, routeName: string, params?: any) => {
     try {
       routes(routeName)(params)
     } catch (error) {
@@ -129,18 +129,14 @@ describe('makeRoutes', () => {
   })
 
   it('raises error when route can not be found', () => {
-    const options = {
-      locale: 'ua'
-    }
-
-    testException(appRoute, 'featuresManage', options)
+    testException(appRoute, 'notExitingRoute')
 
     expect.assertions(2)
   })
 
   it('generate route for fallback locale if specified locale was not found', () => {
     testRouteUrl(
-      makeRoutes({ ...defaultConfig, fallbackLocale: 'en-us' }),
+      appRoute,
       'featuresManage',
       { locale: 'it-fr' },
       'http://example.com:3000/features/ATS-applicant-management'

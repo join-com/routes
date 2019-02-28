@@ -55,7 +55,7 @@ const buildRoute = <T extends string>(
     config,
     routeName,
     locale,
-    config.fallbackLocale
+    config.locale
   )
 
   const useSubdomain = Boolean(route.options && route.options.subdomain)

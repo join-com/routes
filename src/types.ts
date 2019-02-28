@@ -11,7 +11,6 @@ export interface RoutesConfig {
   baseUrl: string
   routes: Route[]
   locale: string
-  fallbackLocale?: string
 }
 
 export interface Options {
