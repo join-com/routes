@@ -2,9 +2,7 @@ export interface Route {
   name: string
   pattern: string
   locale?: string
-  options?: {
-    subdomain?: boolean
-  }
+  options?: Record<string, unknown>
 }
 
 export interface RoutesConfig {
