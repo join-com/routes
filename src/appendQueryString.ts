@@ -1,4 +1,7 @@
-export default function appendQueryString(url: string, queryString: string) {
+export default function appendQueryString(
+  url: string,
+  queryString: string | undefined
+) {
   if (!queryString) {
     return url
   }
