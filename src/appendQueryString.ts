@@ -1,3 +1,7 @@
+function trimQueryString(queryString: string) {
+  return queryString && queryString.replace(/^[?&]/, '')
+}
+
 export default function appendQueryString(
   url: string,
   queryString: string | undefined
@@ -6,5 +10,7 @@ export default function appendQueryString(
     return url
   }
 
-  return url + (url.indexOf('?') === -1 ? '?' : '&') + queryString
+  return (
+    url + (url.indexOf('?') === -1 ? '?' : '&') + trimQueryString(queryString)
+  )
 }

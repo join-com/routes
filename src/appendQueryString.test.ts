@@ -12,4 +12,10 @@ describe('appendQueryString', () => {
       appendQueryString('http://test.com?key1=value1', 'key3=value3')
     ).toEqual('http://test.com?key1=value1&key3=value3')
   })
+
+  it('trims ? from query strings', () => {
+    expect(
+      appendQueryString('http://test.com?key1=value1', '?key3=value3')
+    ).toEqual('http://test.com?key1=value1&key3=value3')
+  })
 })
